@@ -58,7 +58,7 @@
     </head>
 <body>
 
-    <form method="post" action="http://localhost:8765/employee/update">
+    <form method="post" action="http://syun0115.herokuapp.com/employee/update">
         <fieldset>
         <legend>UPDATE</legend> 
         <!-- <% emp = emp[0] %>    -->
@@ -76,12 +76,12 @@
             <label>職稱: </label>
             <input type="text" id="title" name="title" value="<%= emp.title %>"><br>
             <button type="submit" onclick="return confirm('確定修改嗎?')">修改</button>
-            <button type="submit" onclick="return confirm('確定刪除嗎?')" formmethod="get" formaction="http://localhost:8765/employee/delete">刪除</button>
-            <input class="button" type="button" onclick="javascript:location.href='http://localhost:8765/employee'" value="返回首頁">
+            <button type="submit" onclick="return confirm('確定刪除嗎?')" formmethod="get" formaction="http://syun0115.herokuapp.com/employee/delete">刪除</button>
+            <input class="button" type="button" onclick="javascript:location.href='http://syun0115.herokuapp.com/employee'" value="返回首頁">
         </div>    
         </fieldset>
     </form>
-    <!-- <form method="get" action="http://localhost:8765/employee/delete">
+    <!-- <form method="get" action="http://syun0115.herokuapp.com/employee/delete">
         <fieldset>
         <legend>DELETE</legend>
         <label>員工編號: </label>
