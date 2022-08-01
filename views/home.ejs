@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .st1{
+            width: 500px;
+            border-bottom: 2px dashed rgb(126, 117, 66);
+            margin: 10px;
+            padding-bottom: 15px;
+        }
+        .t1{
+            width: 100px;
+            float: left;
+            text-align: left;
+        }
+        fieldset{
+            width: 500px;
+            border: 3px solid rgb(7, 171, 190);
+            border-radius: 25px;
+            margin: auto; 
+        }
+        legend{
+            color: rgb(178, 30, 30);
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <form method="get" action="http://localhost:8765/employee/queryall">
+        <fieldset>
+        <legend>SEARCH</legend>    
+        <div class="st0">
+            <label>員工清冊: </label>
+            <input type="submit" value="查詢">
+        </div>    
+        </fieldset>
+    </form>
+
+    <form method="get" action="http://localhost:8765/employee/queryone">
+        <fieldset>
+        <legend>SEARCH</legend>
+        <label>員工資料查詢＆修改＆刪除: </label><br>    
+        <div class="st0">
+            <input type="text" id="empno" name="empno" placeholder="請輸入員工編號">
+            <input type="submit" value="查詢">
+        </div>   
+        </fieldset>
+    </form>
+    <form method="get" action="http://localhost:8765/employee/queryname">
+        <fieldset>
+        <legend>SEARCH</legend>
+        <label>員工資料查詢(可輸入姓氏模糊查詢): </label><br>    
+        <div class="st0">  
+            <input type="text" id="ename" name="name" placeholder="請輸入姓名">
+            <input type="submit" value="查詢">
+        </div>    
+        </fieldset>
+    </form>
+    <form method="post" action="http://localhost:8765/employee/insert">
+        <fieldset>
+        <legend>INSERT</legend>  
+        <div class="st0">
+            <label>員工編號: </label>
+            <input type="text" id="empno" name="empno" required><br>
+            <label>姓名: </label>
+            <input type="text" id="ename" name="ename" required><br>
+            <label>到職日: </label>
+            <input type="date" id="hiredate" name="hiredate" required><br>
+            <label>薪資: </label>
+            <input type="text" id="salary" name="salary" required><br>
+            <label>部門代號: </label>
+            <input type="text" id="deptno" name="deptno" required><br>
+            <label>職稱: </label>
+            <input type="text" id="title" name="title" required><br>
+            <input type="submit" value="新增">
+        </div>    
+        </fieldset>
+    </form>
+
+</body>
+</html>

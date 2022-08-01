@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .st1{
+                width: 500px;
+                border-bottom: 2px dashed rgb(126, 117, 66);
+                margin: 10px;
+                padding-bottom: 15px;
+            }
+            .sub{
+                width: 500px;
+                margin: 10px;
+                text-align: center;
+            }
+            .t1{
+                width: 100px;
+                float: left;
+                text-align: left;
+            }
+            fieldset{
+                width: 550px;
+                border: 3px solid rgb(7, 171, 190);
+                border-radius: 25px;
+                margin: auto; 
+            }
+            table{
+                margin: auto;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            legend{
+                color: rgb(178, 30, 30);
+                margin-left: 50px;
+            }
+
+            .button{
+                width: 500px;
+                margin-left: 30px;
+                margin-right: 30px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+        </style>
+    </head>
+<body>
+    <fieldset>
+    <legend>員工資料</legend>
+    <table border="1">
+        <tr>
+            <th>員工編號</th>
+            <th>姓名</th>
+            <th>到職日</th>
+            <th>薪資</th>
+            <th>部門代號</th>
+            <th>職稱</th>
+        </tr>
+        <% for(let i = 0; i < emp.length; i++) { %>
+        <tr>
+            <td><%= emp[i].empno %></td>
+            <td><%= emp[i].ename %></td>
+            <td><%= emp[i].hiredate.substring(0,10) %></td>
+            <td><%= emp[i].salary %></td>
+            <td><%= emp[i].deptno %></td>
+            <td><%= emp[i].title %></td>
+        </tr> <% } %>
+    </table>
+    <input class="button" type="button" onclick="javascript:location.href='http://localhost:8765/employee'" value="返回首頁">
+    </fieldset>
+</body>
+<!-- <script>window.alert("Hello!")</script> -->
+</html>

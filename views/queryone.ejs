@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .st1{
+                width: 500px;
+                border-bottom: 2px dashed rgb(126, 117, 66);
+                margin: 10px;
+                padding-bottom: 15px;
+            }
+            .sub{
+                width: 500px;
+                margin: 10px;
+                text-align: center;
+            }
+            .t1{
+                width: 100px;
+                float: left;
+                text-align: left;
+            }
+            fieldset{
+                width: 550px;
+                border: 3px solid rgb(7, 171, 190);
+                border-radius: 25px;
+                margin: auto; 
+            }
+            table{
+                margin: auto;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            legend{
+                color: rgb(178, 30, 30);
+                margin-left: 50px;
+            }
+
+            button{
+                width: 500px;
+                margin-left: 30px;
+                margin-right: 30px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                text-align: center;
+            }
+            .button{
+                width: 500px;
+                margin-left: 30px;
+                margin-right: 30px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                text-align: center;
+            }
+        </style>
+    </head>
+<body>
+
+    <form method="post" action="http://localhost:8765/employee/update">
+        <fieldset>
+        <legend>UPDATE</legend> 
+        <!-- <% emp = emp[0] %>    -->
+        <div class="st0">
+            <label>員工編號: </label>
+            <input type="text" id="empno" name="empno" value="<%= emp.empno %>" readonly><br>
+            <label>姓名: </label>
+            <input type="text" id="ename" name="ename" value="<%= emp.ename %>"><br>
+            <label>到職日: </label>
+            <input type="date" id="hiredate" name="hiredate" value="<%= emp.hiredate.substring(0,10) %>"><br>
+            <label>薪資: </label>
+            <input type="text" id="salary" name="salary" value="<%= emp.salary %>"><br>
+            <label>部門代號: </label>
+            <input type="text" id="deptno" name="deptno" value="<%= emp.deptno %>"><br>
+            <label>職稱: </label>
+            <input type="text" id="title" name="title" value="<%= emp.title %>"><br>
+            <button type="submit" onclick="return confirm('確定修改嗎?')">修改</button>
+            <button type="submit" onclick="return confirm('確定刪除嗎?')" formmethod="get" formaction="http://localhost:8765/employee/delete">刪除</button>
+            <input class="button" type="button" onclick="javascript:location.href='http://localhost:8765/employee'" value="返回首頁">
+        </div>    
+        </fieldset>
+    </form>
+    <!-- <form method="get" action="http://localhost:8765/employee/delete">
+        <fieldset>
+        <legend>DELETE</legend>
+        <label>員工編號: </label>
+        <input type="text" id="empno" name="empno" value="<%= emp.empno %>" >
+        <button type="submit">刪除</button>
+        </fieldset>
+    </form> -->
+</body>
+</html>
+
